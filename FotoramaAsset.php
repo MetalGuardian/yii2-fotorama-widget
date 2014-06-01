@@ -14,7 +14,6 @@ use yii\web\AssetBundle;
  */
 class FotoramaAsset extends AssetBundle
 {
-    const CURRENT_VERSION = '4.5.1';
     const CDN_SOURCE_PATH = '//cdnjs.cloudflare.com/ajax/libs/fotorama/';
 
     public $version = false;
@@ -41,7 +40,7 @@ class FotoramaAsset extends AssetBundle
     public function registerAssetFiles($view)
     {
         if ($this->version) {
-            $version = is_string($this->version) ? $this->version : self::CURRENT_VERSION;
+            $version = is_string($this->version) ? $this->version : Fotorama::VERSION;
             $this->baseUrl = self::CDN_SOURCE_PATH . $version;
         }
 

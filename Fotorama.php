@@ -5,9 +5,11 @@
 
 namespace metalguardian\fotorama;
 
+use Yii;
 use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\Json;
+use yii\web\View;
 
 /**
  * Class Fotorama
@@ -24,7 +26,12 @@ class Fotorama extends Widget
      *
      * @var bool | string
      */
-    public static $version = false;
+    public static $useCDN = false;
+
+    /**
+     * Current Fotorama widget version
+     */
+    const VERSION = '4.5.1';
 
     /**
      * Widget options
@@ -129,13 +136,6 @@ class Fotorama extends Widget
     public $useHtmlData = true;
 
     /**
-     * Fotorama default widget configs listed in [[options]]
-     *
-     * @var array
-     */
-    public static $fotoramaDefaults = [];
-
-    /**
      * Container tag name
      *
      * @var string
@@ -148,6 +148,22 @@ class Fotorama extends Widget
      * @var array
      */
     public $htmlOptions = [];
+
+    /**
+     * Setup default Fotorama widget options
+     * {@link http://fotorama.io/customize/options/#defaults}
+     *
+     * @param array $options
+     */
+    public static function setDefaults($options = [])
+    {
+        $options = empty($options) ? '{}' : Json::encode($options);
+        $view = Yii::$app->getView();
+        $js = <<<EOD
+fotoramaDefaults = {$options};
+EOD;
+        $view->registerJs($js, View::POS_HEAD, 'fotorama-defaults');
+    }
 
     /**
      * Initializes the widget.
@@ -204,7 +220,7 @@ EOD;
         $view = $this->getView();
         $view->registerJs($js);
 
-        FotoramaAsset::register($view)->version = self::$version;
+        FotoramaAsset::register($view)->version = self::$useCDN;
 
         echo Html::endTag($this->tagName);
     }

@@ -65,9 +65,11 @@ Second way:
     <?php 
     echo \metalguardian\fotorama\Fotorama::widget(
         [
-        'items' => [
-                ['img' => 'http://s.fotorama.io/1.jpg',],
+            'items' => [
+                ['img' => 'http://s.fotorama.io/1.jpg', 'id' => 'id-one',],
                 ['img' => 'http://s.fotorama.io/2.jpg',],
+                ['img' => 'http://s.fotorama.io/3.jpg',],
+                ['img' => 'http://s.fotorama.io/4.jpg',],
             ],
             'options' => [
                 'nav' => 'thumbs',
@@ -82,7 +84,7 @@ To use CDNJS put this before run widget, will be used current version:
 
 ```php
 
-    <?php \metalguardian\fotorama\Fotorama::$version = true; ?>
+    <?php \metalguardian\fotorama\Fotorama::$useCDN = true; ?>
 
 ```
 
@@ -90,7 +92,26 @@ Or select custom version:
 
 ```php
 
-    <?php \metalguardian\fotorama\Fotorama::$version = '4.5.0'; ?>
+    <?php \metalguardian\fotorama\Fotorama::$useCDN = '4.5.0'; ?>
+
+```
+
+To setup default Fotorama widget options to all galleries on page:
+
+```php
+
+    <?php 
+    \metalguardian\fotorama\Fotorama::setDefaults(
+        [
+            'nav' => 'thumbs',
+            'spinner' => [
+                'lines' => 20,
+            ],
+            'loop' => true,
+            'hash' => true,
+        ]
+    );
+    ?>
 
 ```
 
