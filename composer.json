@@ -1,0 +1,21 @@
+{
+	"name": "metalguardian/yii2-fotorama-widget",
+	"description": "fotorama image gallery yii2 widget",
+	"keywords": ["yii2", "extension", "widget", "fotorama"],
+	"homepage": "https://github.com/MetalGuardian/yii2-fotorama-widget",
+	"type": "yii2-extension",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ivan Pushkin"
+		}
+	],
+	"require": {
+		"yiisoft/yii2": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"metalguardian\\fotorama\\": ""
+		}
+	}
+}
