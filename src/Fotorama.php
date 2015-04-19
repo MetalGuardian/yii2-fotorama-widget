@@ -31,7 +31,7 @@ class Fotorama extends Widget
     /**
      * Current Fotorama widget version
      */
-    const VERSION = '4.5.1';
+    const VERSION = '4.6.3';
 
     /**
      * Widget options
@@ -194,6 +194,13 @@ EOD;
 
         $this->htmlOptions['data-auto'] = 'false'; // disable auto init
 
+        if (!empty($this->items)) {
+            $this->options['data'] = $this->items;
+        }
+        if (!empty($this->spinner)) {
+            $this->options['spinner'] = $this->spinner;
+        }
+
         echo Html::beginTag($this->tagName, $this->htmlOptions) . "\n";
     }
 
@@ -205,23 +212,26 @@ EOD;
     {
         parent::run();
 
-        if (!empty($this->items)) {
-            $this->options['data'] = $this->items;
-        }
-        if (!empty($this->spinner)) {
-            $this->options['spinner'] = $this->spinner;
-        }
-        $options = empty($this->options) ? '' : Json::encode($this->options);
-        $id = $this->htmlOptions['id'];
-        $js = <<<EOD
-    jQuery("#{$id}").fotorama({$options});
-EOD;
+        echo Html::endTag($this->tagName);
 
+        $this->registerJs();
+    }
+
+    /**
+     * @param int $position
+     * @param null $key
+     */
+    public function registerJs($position = View::POS_READY, $key = null)
+    {
         $view = $this->getView();
-        $view->registerJs($js);
 
         FotoramaAsset::register($view)->version = self::$useCDN;
 
-        echo Html::endTag($this->tagName);
+        $options = empty($this->options) ? '' : Json::encode($this->options);
+        $id = $this->htmlOptions['id'];
+        $js = <<<EOD
+jQuery("#{$id}").fotorama({$options});
+EOD;
+        $view->registerJs($js, $position, $key);
     }
 } 

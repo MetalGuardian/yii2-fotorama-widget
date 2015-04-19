@@ -18,6 +18,11 @@ class FotoramaAsset extends AssetBundle
 
     public $version = false;
 
+    /**
+     * @inheritdoc
+     */
+    public $sourcePath = '@vendor/bower/fotorama';
+
     public $css = [
         'fotorama.css'
     ];
@@ -29,13 +34,6 @@ class FotoramaAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
     ];
-
-    public function init()
-    {
-        $this->sourcePath = __DIR__ . '/assets';
-
-        parent::init();
-    }
 
     public function registerAssetFiles($view)
     {

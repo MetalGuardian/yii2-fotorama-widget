@@ -120,4 +120,4 @@ For complete documentation of Fotorama and all widget options please refer to th
 License
 -------
 
-**yii2-fotorama-widget** is released under the MIT License. See the bundled `LICENSE.md` for details.
+**yii2-fotorama-widget** is released under the MIT License. See the bundled `LICENSE` for details.

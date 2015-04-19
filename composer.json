@@ -1,21 +1,33 @@
 {
-	"name": "metalguardian/yii2-fotorama-widget",
-	"description": "fotorama image gallery yii2 widget",
-	"keywords": ["yii2", "extension", "widget", "fotorama"],
-	"homepage": "https://github.com/MetalGuardian/yii2-fotorama-widget",
-	"type": "yii2-extension",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Ivan Pushkin"
-		}
-	],
-	"require": {
-		"yiisoft/yii2": "*"
-	},
-	"autoload": {
-		"psr-4": {
-			"metalguardian\\fotorama\\": ""
-		}
-	}
+    "name": "metalguardian/yii2-fotorama-widget",
+    "description": "fotorama image gallery yii2 widget",
+    "keywords": [
+        "yii2",
+        "extension",
+        "widget",
+        "fotorama"
+    ],
+    "homepage": "https://github.com/MetalGuardian/yii2-fotorama-widget",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Pushkin",
+            "email": "imetalguardi+yii2@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/fotorama": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "metalguardian\\fotorama\\": "src"
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower"
+        }
+    }
 }
