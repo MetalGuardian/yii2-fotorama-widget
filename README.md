@@ -2,6 +2,16 @@ Fotorama Yii2 widget
 ====================
 This yii2 extension is a wrapper for the powerful jQuery gallery Fotorama
 
+[![Latest Stable Version](https://poser.pugx.org/metalguardian/yii2-fotorama-widget/v/stable.svg)](https://packagist.org/packages/metalguardian/yii2-fotorama-widget)
+[![Total Downloads](https://poser.pugx.org/metalguardian/yii2-fotorama-widget/downloads.svg)](https://packagist.org/packages/metalguardian/yii2-fotorama-widget)
+[![Latest Unstable Version](https://poser.pugx.org/metalguardian/yii2-fotorama-widget/v/unstable.svg)](https://packagist.org/packages/metalguardian/yii2-fotorama-widget)
+[![License](https://poser.pugx.org/metalguardian/yii2-fotorama-widget/license.svg)](https://packagist.org/packages/metalguardian/yii2-fotorama-widget)
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MetalGuardian/yii2-fotorama-widget/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MetalGuardian/yii2-fotorama-widget/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/MetalGuardian/yii2-fotorama-widget/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/MetalGuardian/yii2-fotorama-widget/?branch=master)
+[![Build Status](https://travis-ci.org/MetalGuardian/yii2-fotorama-widget.svg?branch=master)](https://travis-ci.org/MetalGuardian/yii2-fotorama-widget)
+[![Code Climate](https://codeclimate.com/github/MetalGuardian/yii2-fotorama-widget/badges/gpa.svg)](https://codeclimate.com/github/MetalGuardian/yii2-fotorama-widget)
+
 Installation
 ------------
 
