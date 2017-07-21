@@ -21,7 +21,7 @@ class FotoramaAsset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@vendor/bower/fotorama';
+    public $sourcePath = '@bower/fotorama';
 
     public $css = [
         'fotorama.css'
