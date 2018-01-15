@@ -31,7 +31,7 @@ class Fotorama extends Widget
     /**
      * Current Fotorama widget version
      */
-    const VERSION = '4.6.3';
+    const VERSION = '4.6.4';
 
     /**
      * Widget options

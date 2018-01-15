@@ -1,6 +1,12 @@
+DEPRECATED
+==========
+Unfortunately, original Fotorama gallery is no longer maintained. You still can use this extension if fotorama fits your project. 
+Check [github thread](https://github.com/artpolikarpov/fotorama/issues/532) for alternatives.
+
+
 Fotorama Yii2 widget
 ====================
-This yii2 extension is a wrapper for the powerful jQuery gallery Fotorama
+This yii2 extension is a wrapper for the powerful jQuery gallery [Fotorama](http://fotorama.io/).
 
 [![Latest Stable Version](https://poser.pugx.org/metalguardian/yii2-fotorama-widget/v/stable.svg)](https://packagist.org/packages/metalguardian/yii2-fotorama-widget)
 [![Total Downloads](https://poser.pugx.org/metalguardian/yii2-fotorama-widget/downloads.svg)](https://packagist.org/packages/metalguardian/yii2-fotorama-widget)
@@ -17,20 +23,12 @@ Installation
 
 Install this extension using [composer](http://getcomposer.org/download/).
 
-Run
-
 ```
-php composer.phar require metalguardian/yii2-fotorama-widget "*"
+composer require metalguardian/yii2-fotorama-widget
 ```
 
-or add
-
-```
-"metalguardian/yii2-fotorama-widget": "*"
-```
-
-to the require section of the `composer.json` file.
-
+You should have configured `asset-packagist` repository in your project's `composer.json` or installed 
+`fxp/composer-asset-plugin` plugin. For more information see [Yii2 bower/npm assets manual](http://www.yiiframework.com/doc-2.0/guide-structure-assets.html#bower-npm-assets)
 
 Usage
 -----
@@ -64,7 +62,7 @@ First way:
         <img src="http://s.fotorama.io/3.jpg">
         <img src="http://s.fotorama.io/4.jpg">
         <img src="http://s.fotorama.io/5.jpg">
-    <?php $fotorama->end(); ?>
+    <?php \metalguardian\fotorama\Fotorama::end(); ?>
 
 ```
 

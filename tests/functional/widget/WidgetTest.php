@@ -110,7 +110,7 @@ JS;
     public function testHtmlList()
     {
         ob_start();
-        $fotorama = \metalguardian\fotorama\Fotorama::begin(
+        $fotorama = Fotorama::begin(
             [
                 'options' => [
                     'loop' => true,
@@ -135,7 +135,7 @@ JS;
 <img src="http://s.fotorama.io/4.jpg">
 <img src="http://s.fotorama.io/5.jpg">
 <?php
-        $fotorama->end();
+        Fotorama::end();
         $out = ob_get_clean();
 
         $except = <<<HTML

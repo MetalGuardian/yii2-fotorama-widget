@@ -1,6 +1,9 @@
 <?php
 
 $config = [
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+    ],
     'components' => [
         'assetManager' => [
             'basePath' => '@yiiunit/assets',
