@@ -20,6 +20,9 @@
         "yiisoft/yii2": "*",
         "bower-asset/fotorama": "4.*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
     "autoload": {
         "psr-4": {
             "metalguardian\\fotorama\\": "src"
@@ -27,7 +30,13 @@
     },
     "extra": {
         "asset-installer-paths": {
-            "bower-asset-library": "vendor/bower"
+            "bower-asset-library": "vendor/bower-asset"
         }
-    }
+    },
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://asset-packagist.org"
+      }
+    ]
 }
